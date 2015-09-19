@@ -2,4 +2,6 @@
     <string name="app_name">FTC Scorer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="action_clear">Clear</string>
+
 </resources>

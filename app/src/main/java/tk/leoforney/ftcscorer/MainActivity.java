@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,11 +25,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView htmlWebView = (WebView)findViewById(R.id.fieldPad);
+        final WebView htmlWebView = (WebView)findViewById(R.id.fieldPad);
         WebSettings webSetting = htmlWebView.getSettings();
         webSetting.setJavaScriptEnabled(true);
         webSetting.setDisplayZoomControls(true);
-        htmlWebView.setWebChromeClient(new WebChromeClient());
+        htmlWebView.setWebChromeClient(new WebChromeClient(){
+            public void onPageFinished(WebView view, String url) {
+                final Button button = (Button) findViewById(R.id.clearCanvas);
+                button.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                            htmlWebView.evaluateJavascript("newCanvas()", null);
+                        } else {
+                            htmlWebView.loadUrl("javascript:newCanvas()");
+                        }
+                    }
+                });
+            }
+        });
+        htmlWebView.getSettings().setAllowFileAccess(true);
 
         String htmlFilename = "index.html";
         AssetManager mgr = getBaseContext().getAssets();
@@ -40,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public static String StreamToString(InputStream in) throws IOException {
