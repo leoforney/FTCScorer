@@ -1,17 +1,42 @@
 package tk.leoforney.ftcscorer;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 public class ScoreActivity extends AppCompatActivity {
+
+    static final String LOG_TAG = ScoreActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        final CheckBox climbers1 = (CheckBox)findViewById(R.id.climbers_1);
+        final CheckBox climbers2 = (CheckBox)findViewById(R.id.climbers_2);
+
+        climbers2.setEnabled(true);
+
+        climbers1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Log.d(LOG_TAG, "climbers1 is checked");
+                    climbers2.setEnabled(false);
+                    // Code to display your message.
+                } if (!isChecked) {
+                    climbers2.setEnabled(true);
+                }
+            }
+        });
+
     }
 
     @Override
