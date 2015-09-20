@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">FTC Scorer</string>
 
-    <string name="action_settings">Settings</string>
     <string name="action_clear">Clear</string>
+    <string name="title_activity_score">Score Keeper</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_score">Score Keeper</string>
+    <string name="action_draw">Coaches playbook</string>
 
 </resources>

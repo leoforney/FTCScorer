@@ -1,5 +1,6 @@
 package tk.leoforney.ftcscorer;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -83,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_clear) {
             Log.d(LOG_TAG, "Clear button pressed!");
             htmlWebView.loadUrl("javascript:newCanvas();");
+            return true;
+        }
+
+        if (id == R.id.action_score) {
+            Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 
