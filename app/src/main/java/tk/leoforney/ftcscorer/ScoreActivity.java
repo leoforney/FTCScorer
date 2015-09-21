@@ -7,12 +7,16 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -58,6 +62,7 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+        findViewById(R.id.beacon_not_hit).requestFocus();
 
         beacon_not_hit = (RadioButton) findViewById(R.id.beacon_not_hit);
         beacon_hit_first = (RadioButton) findViewById(R.id.beacon_hit_first);
@@ -121,6 +126,11 @@ public class ScoreActivity extends AppCompatActivity {
                 totalScore.setText(strI);
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
     }
 

@@ -2,32 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-65c1150a395a8caf67af4f1b1db0cbcb336af4fc.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\internal_impl-23.0.1-2fe97bdd922745754cbf1b0e166ae6c09e35df0f.jar" />
     </item>
     <item
-        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jar="C:\Users\Leo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-4c399b0257bc18843bbfde3c7f0967d878c52063.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\support-annotations-23.0.1-2ff46da4aeafcb1d926c863989c85010516f01b2.jar" />
     </item>
     <item
-        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0-8fcf614f3608b2ae76c4f933d6f725db44d848dc.jar" />
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-7e2ac72f33f709ac87c38e25a1e61c36b8bc371f.jar" />
     </item>
     <item
-        jar="C:\Users\Leo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0-be12fdd001f5a464ff0398cbfdf36a2831144100.jar" />
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-eff09b4c8096303ce8b7dd51b4ff20af6b0fc000.jar" />
+    </item>
+    <item
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-498faa0d8c03bab054db8cae8a7fd577713bd16b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-2c50ffb3132cbb77da1fb1dda7643d14e9b02b34.jar" />
+    </item>
+    <item
+        jar="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Leo\AndroidStudioProjects\FTCScorer\app\build\intermediates\pre-dexed\release\classes-4505b436079e2d9bbbfcfa226e863affe65357a0.jar" />
     </item>
 
 </items>
