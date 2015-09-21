@@ -51,27 +51,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                                                                        <RadioButton
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="Not hit"
+                                                                            android:id="@+id/beacon_not_hit"
+                                                                            android:padding="15dp"/>
+                                                                        <RadioButton
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="First time"
+                                                                            android:id="@+id/beacon_hit_first"
+                                                                            android:padding="15dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Not hit"
-                    android:id="@+id/beacon_not_hit"
-                    android:padding="15dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="First time"
-                    android:id="@+id/beacon_hit_first"
-                    android:padding="15dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Second time"
-                    android:id="@+id/beacon_hit_second"
-                    android:padding="15dp"/>
+                                                                        <RadioButton
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="Second time"
+                                                                            android:id="@+id/beacon_hit_second"
+                                                                            android:padding="15dp"/>
 
             </RadioGroup>
 
@@ -94,43 +92,53 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="Parked on ground"
+                                                                                android:id="@+id/autoparking_none"
+                                                                                android:padding="15dp"/>
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="Floor goal or repair zone"
+                                                                                android:id="@+id/autoparking_floor"
+                                                                                android:padding="15dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="On floor"
-                    android:padding="15dp"/>
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/autoparking_half"
+                                                                                android:text="Half on mountain"
+                                                                                android:padding="15dp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Half on mountain"
-                    android:padding="15dp" />
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/autoparking_low"
+                                                                                android:text="Low"
+                                                                                android:padding="15dp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Low"
-                    android:padding="15dp" />
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/autoparking_middle"
+                                                                                android:text="Middle"
+                                                                                android:padding="15dp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Middle"
-                    android:padding="15dp" />
+                                                                            <RadioButton
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/autoparking_high"
+                                                                                android:text="High"
+                                                                                android:padding="15dp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="High"
-                    android:padding="15dp" />
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:id="@+id/climbers_1"
-                    android:text="Climbers in shelter"/>
+                                                                            <CheckBox
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:padding="15dp"
+                                                                                android:id="@+id/climbers_1"
+                                                                                android:text="Climbers in shelter"/>
 
             </RadioGroup>
 
@@ -156,12 +164,12 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:id="@+id/climbers_2"
-                android:text="Climbers in shelter"/>
+                                                                                <CheckBox
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/climbers_2"
+                                                                                    android:text="Climbers in shelter"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -192,13 +200,14 @@
                             android:text="Floor goal"
                             android:textSize="15sp"
                             android:textColor="#000"/>
-                        <EditText
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:imeOptions="flagNoExtractUi"
-                            android:maxLength="2"
-                            android:text="0" />
+                                                                                        <EditText
+                                                                                            android:layout_width="40dp"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:inputType="number"
+                                                                                            android:imeOptions="flagNoExtractUi"
+                                                                                            android:id="@+id/debris_floor"
+                                                                                            android:maxLength="2"
+                                                                                            android:text="0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -212,13 +221,14 @@
                             android:text="Low zone"
                             android:textSize="15sp"
                             android:textColor="#000"/>
-                        <EditText
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:imeOptions="flagNoExtractUi"
-                            android:maxLength="2"
-                            android:text="0" />
+                                                                                    <EditText
+                                                                                        android:layout_width="40dp"
+                                                                                        android:layout_height="wrap_content"
+                                                                                        android:inputType="number"
+                                                                                        android:imeOptions="flagNoExtractUi"
+                                                                                        android:id="@+id/debris_low"
+                                                                                        android:maxLength="2"
+                                                                                        android:text="0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -232,13 +242,14 @@
                             android:text="Middle zone"
                             android:textSize="15sp"
                             android:textColor="#000"/>
-                        <EditText
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:imeOptions="flagNoExtractUi"
-                            android:maxLength="2"
-                            android:text="0" />
+                                                                                    <EditText
+                                                                                        android:layout_width="40dp"
+                                                                                        android:layout_height="wrap_content"
+                                                                                        android:inputType="number"
+                                                                                        android:imeOptions="flagNoExtractUi"
+                                                                                        android:id="@+id/debris_middle"
+                                                                                        android:maxLength="2"
+                                                                                        android:text="0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -252,13 +263,14 @@
                             android:text="High"
                             android:textSize="15sp"
                             android:textColor="#000"/>
-                        <EditText
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:imeOptions="flagNoExtractUi"
-                            android:maxLength="2"
-                            android:text="0" />
+                                                                                    <EditText
+                                                                                        android:layout_width="40dp"
+                                                                                        android:layout_height="wrap_content"
+                                                                                        android:inputType="number"
+                                                                                        android:imeOptions="flagNoExtractUi"
+                                                                                        android:id="@+id/debris_high"
+                                                                                        android:maxLength="2"
+                                                                                        android:text="0" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -268,7 +280,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:padding="15dp"
-                android:text="Climbers knocked"/>
+                android:text="Zipliners knocked"/>
 
             <View
                 android:layout_width="fill_parent"
@@ -281,26 +293,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="1"
-                    />
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/zipliners_0"
+                                                                                    android:text="0"
+                                                                                    />
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/zipliners_1"
+                                                                                    android:text="1"
+                                                                                    />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="2"
-                    />
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/zipliners_2"
+                                                                                    android:text="2"
+                                                                                    />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="3"
-                    />
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/zipliners_3"
+                                                                                    android:text="3"
+                                                                                    />
             </RadioGroup>
 
             <TextView
@@ -321,23 +343,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Low"
-                    android:padding="15dp"/>
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:text="Parked on floor"
+                                                                                    android:id="@+id/endparking_none"
+                                                                                    android:padding="15dp"/>
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:text="Half on mountain"
+                                                                                    android:id="@+id/endparking_half"
+                                                                                    android:padding="15dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Middle"
-                    android:padding="15dp"/>
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:text="Low"
+                                                                                    android:id="@+id/endparking_low"
+                                                                                    android:padding="15dp"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="High"
-                    android:padding="15dp"/>
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:id="@+id/endparking_middle"
+                                                                                    android:text="Middle"
+                                                                                    android:padding="15dp"/>
+
+                                                                                <RadioButton
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:id="@+id/endparking_high"
+                                                                                    android:text="High"
+                                                                                    android:padding="15dp"/>
             </RadioGroup>
 
             <RelativeLayout
@@ -360,17 +398,19 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="Hang on bar"/>
+                                                                                <CheckBox
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/end_hang"
+                                                                                    android:text="Hang on bar"/>
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="All clear signal"/>
+                                                                                <CheckBox
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:padding="15dp"
+                                                                                    android:id="@+id/end_clear"
+                                                                                    android:text="All clear signal"/>
 
             <View
                 android:layout_width="fill_parent"
@@ -393,13 +433,13 @@
                     android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="0"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/updateScore"
-                    android:text="Update Score"
-                    android:layout_below="@id/totalScore"
-                    android:layout_centerHorizontal="true"/>
+                                                                            <Button
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/updateScore"
+                                                                                android:text="Update Score"
+                                                                                android:layout_below="@id/totalScore"
+                                                                                android:layout_centerHorizontal="true"/>
             </RelativeLayout>
 
         </LinearLayout>

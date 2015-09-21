@@ -6,37 +6,193 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
 
     static final String LOG_TAG = ScoreActivity.class.getSimpleName();
 
+    RadioButton beacon_not_hit;
+    RadioButton beacon_hit_first;
+    RadioButton beacon_hit_second;
+
+    RadioButton autoparking_none;
+    RadioButton autoparking_floor;
+    RadioButton autoparking_half;
+    RadioButton autoparking_low;
+    RadioButton autoparking_middle;
+    RadioButton autoparking_high;
+
+    CheckBox climbers1;
+    CheckBox climbers2;
+
+    EditText debris_floor;
+    EditText debris_low;
+    EditText debris_middle;
+    EditText debris_high;
+
+    RadioButton zipliners_0;
+    RadioButton zipliners_1;
+    RadioButton zipliners_2;
+    RadioButton zipliners_3;
+
+    RadioButton endparking_none;
+    RadioButton endparking_half;
+    RadioButton endparking_low;
+    RadioButton endparking_middle;
+    RadioButton endparking_high;
+
+    CheckBox end_hang;
+    CheckBox end_clear;
+
+    TextView totalScore;
+    Button updateScore;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        final CheckBox climbers1 = (CheckBox)findViewById(R.id.climbers_1);
-        final CheckBox climbers2 = (CheckBox)findViewById(R.id.climbers_2);
+        beacon_not_hit = (RadioButton) findViewById(R.id.beacon_not_hit);
+        beacon_hit_first = (RadioButton) findViewById(R.id.beacon_hit_first);
+        beacon_hit_second = (RadioButton) findViewById(R.id.beacon_hit_second);
 
-        climbers2.setEnabled(true);
+        autoparking_none = (RadioButton) findViewById(R.id.autoparking_none);
+        autoparking_floor = (RadioButton) findViewById(R.id.autoparking_floor);
+        autoparking_half = (RadioButton) findViewById(R.id.autoparking_half);
+        autoparking_low = (RadioButton) findViewById(R.id.autoparking_low);
+        autoparking_middle = (RadioButton) findViewById(R.id.autoparking_middle);
+        autoparking_high = (RadioButton) findViewById(R.id.autoparking_high);
+
+        climbers1 = (CheckBox)findViewById(R.id.climbers_1);
+        climbers2 = (CheckBox)findViewById(R.id.climbers_2);
+
+        debris_floor = (EditText) findViewById(R.id.debris_floor);
+        debris_low = (EditText) findViewById(R.id.debris_low);
+        debris_middle = (EditText) findViewById(R.id.debris_middle);
+        debris_high = (EditText) findViewById(R.id.debris_high);
+
+        zipliners_0 = (RadioButton) findViewById(R.id.zipliners_0);
+        zipliners_1 = (RadioButton) findViewById(R.id.zipliners_1);
+        zipliners_2 = (RadioButton) findViewById(R.id.zipliners_2);
+        zipliners_3 = (RadioButton) findViewById(R.id.zipliners_3);
+
+        endparking_none = (RadioButton) findViewById(R.id.endparking_none);
+        endparking_half = (RadioButton) findViewById(R.id.endparking_half);
+        endparking_low = (RadioButton) findViewById(R.id.endparking_low);
+        endparking_middle = (RadioButton) findViewById(R.id.endparking_middle);
+        endparking_high = (RadioButton) findViewById(R.id.endparking_high);
+
+        end_hang = (CheckBox)findViewById(R.id.end_hang);
+        end_clear = (CheckBox)findViewById(R.id.end_clear);
+
+        totalScore = (TextView)findViewById(R.id.totalScore);
+        updateScore = (Button)findViewById(R.id.updateScore);
+
+
 
         climbers1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     Log.d(LOG_TAG, "climbers1 is checked");
                     climbers2.setEnabled(false);
                     // Code to display your message.
-                } if (!isChecked) {
+                }
+                if (!isChecked) {
                     climbers2.setEnabled(true);
                 }
             }
         });
 
+        updateScore.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int score = getTotal();
+                StringBuilder sb = new StringBuilder();
+                sb.append("");
+                sb.append(score);
+                String strI = sb.toString();
+                totalScore.setText(strI);
+            }
+        });
+
+    }
+
+    int getTotal() {
+
+        int total = 0;
+
+        if (beacon_hit_first.isChecked()) {
+            total = total + 20;
+        } if (beacon_hit_second.isChecked()) {
+            total = total + 40;
+        }
+
+        if (autoparking_floor.isChecked()) {
+            total = total + 5;
+        } if (autoparking_half.isChecked()) {
+            total = total + 5;
+        } if (autoparking_low.isChecked()) {
+            total = total + 10;
+        } if (autoparking_middle.isChecked()) {
+            total = total + 20;
+        } if (autoparking_high.isChecked()) {
+            total = total + 40;
+        }
+
+        if (climbers1.isChecked()) {
+            total = total + 40;
+        } if (climbers2.isChecked()) {
+            total = total + 20;
+        }
+
+        if (debris_floor.getText().toString().trim() != "0") {
+            int i = Integer.parseInt(debris_floor.getText().toString().trim());
+            total = total + (1 * i);
+        } if (debris_low.getText().toString().trim() != "0") {
+            int i = Integer.parseInt(debris_low.getText().toString().trim());
+            total = total + (5 * i);
+        } if (debris_middle.getText().toString().trim() != "0") {
+            int i = Integer.parseInt(debris_middle.getText().toString().trim());
+            total = total + (10 * i);
+        } if (debris_high.getText().toString().trim() != "0") {
+            int i = Integer.parseInt(debris_high.getText().toString().trim());
+            total = total + (15 * i);
+        }
+
+        if (zipliners_1.isChecked()){
+            total = total + 20;
+        } if (zipliners_2.isChecked()) {
+            total = total + 40;
+        } if (zipliners_3.isChecked()) {
+            total = total + 60;
+        }
+
+        if (endparking_half.isChecked()) {
+            total = total + 5;
+        } if (endparking_low.isChecked()) {
+            total = total + 10;
+        } if (endparking_middle.isChecked()) {
+            total = total + 20;
+        } if (endparking_high.isChecked()) {
+            total = total + 40;
+        }
+
+        if (end_hang.isChecked()) {
+            total = total + 80;
+        }
+
+        if (end_clear.isChecked()) {
+            total = total + 20;
+        }
+
+        return total;
     }
 
     @Override
