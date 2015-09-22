@@ -165,13 +165,13 @@ public class ScoreActivity extends AppCompatActivity {
         if (!debris_floor.getText().toString().trim().equals("")) {
             int i = Integer.parseInt(debris_floor.getText().toString().trim());
             total = total + (1 * i);
-        } if (debris_low.getText().toString().trim() != "") {
+        } if (!debris_low.getText().toString().trim().equals("")) {
             int i = Integer.parseInt(debris_low.getText().toString().trim());
             total = total + (5 * i);
-        } if (debris_middle.getText().toString().trim() != "") {
+        } if (!debris_middle.getText().toString().trim().equals("")) {
             int i = Integer.parseInt(debris_middle.getText().toString().trim());
             total = total + (10 * i);
-        } if (debris_high.getText().toString().trim() != "") {
+        } if (!debris_high.getText().toString().trim().equals("")) {
             int i = Integer.parseInt(debris_high.getText().toString().trim());
             total = total + (15 * i);
         }
