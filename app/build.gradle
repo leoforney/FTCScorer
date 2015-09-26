@@ -7,9 +7,9 @@ android {
     defaultConfig {
         applicationId "tk.leoforney.ftcscorer"
         minSdkVersion 17
-        targetSdkVersion 23
-        versionCode 3
-        versionName "1.1.1"
+        targetSdkVersion 21
+        versionCode 4
+        versionName "1.2"
     }
     buildTypes {
         release {
