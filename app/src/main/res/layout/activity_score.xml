@@ -1,155 +1,526 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/root_view"
     android:orientation="vertical"
     tools:context="tk.leoforney.ftcscorer.ScoreActivity">
 
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:textColor="#000" android:textStyle="bold" android:padding="15dp" android:text="Autonomous" android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:text="Autonomous"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Beacon hit"
+                android:textSize="24sp" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:padding="15dp" android:text="Beacon hit" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+                <RadioButton
+                    android:id="@+id/beacon_not_hit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Not hit" />
 
-            <RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Not hit" android:id="@+id/beacon_not_hit" android:padding="15dp" />
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First time" android:id="@+id/beacon_hit_first" android:padding="15dp" />
+                <RadioButton
+                    android:id="@+id/beacon_hit_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="First time" />
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Second time" android:id="@+id/beacon_hit_second" android:padding="15dp" />
+                <RadioButton
+                    android:id="@+id/beacon_hit_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Second time" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Parking"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/autoparking_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Parked on ground" />
+
+                <RadioButton
+                    android:id="@+id/autoparking_floor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Floor goal or repair zone" />
+
+                <RadioButton
+                    android:id="@+id/autoparking_half"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Half on mountain" />
+
+                <RadioButton
+                    android:id="@+id/autoparking_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Low" />
+
+                <RadioButton
+                    android:id="@+id/autoparking_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Middle" />
+
+                <RadioButton
+                    android:id="@+id/autoparking_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="High" />
 
             </RadioGroup>
 
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Climbers in shelter"
+            android:textSize="24sp" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:padding="15dp" android:text="Parking" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
-
-            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Parked on ground" android:id="@+id/autoparking_none" android:padding="15dp" />
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Floor goal or repair zone" android:id="@+id/autoparking_floor" android:padding="15dp" />
-
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/autoparking_half" android:text="Half on mountain" android:padding="15dp" />
-
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/autoparking_low" android:text="Low" android:padding="15dp" />
-
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/autoparking_middle" android:text="Middle" android:padding="15dp" />
-
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/autoparking_high" android:text="High" android:padding="15dp" />
-
-                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/climbers_1" android:text="Climbers in shelter" />
-
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0"
+                    />
+                <RadioButton
+                    android:id="@+id/climber_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="1"
+                    />
+                <RadioButton
+                    android:id="@+id/climber_1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="2"
+                    />
+                <RadioButton
+                    android:id="@+id/climber_1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="3"
+                    />
             </RadioGroup>
+                <CheckBox
+                    android:id="@+id/climber_duringteleop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Scored during autonomous"/>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:textColor="#000" android:textStyle="bold" android:padding="15dp" android:text="Teleop" android:layout_centerHorizontal="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:text="Teleop"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
 
-            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/climbers_2" android:text="Climbers in shelter" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Debris"
+                android:textSize="24sp" />
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:padding="15dp" android:text="Debris" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:text="Floor goal" android:textSize="15sp" android:textColor="#000" />
-                    <EditText android:layout_width="40dp" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="flagNoExtractUi" android:id="@+id/debris_floor" android:maxLength="2" android:descendantFocusability="beforeDescendants" android:focusableInTouchMode="true" android:text="0" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Floor goal"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/debris_floor"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text="0" />
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:text="Low zone" android:textSize="15sp" android:textColor="#000" />
-                    <EditText android:layout_width="40dp" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="flagNoExtractUi" android:id="@+id/debris_low" android:maxLength="2" android:descendantFocusability="beforeDescendants" android:focusableInTouchMode="true" android:text="0" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Low zone"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/debris_low"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text="0" />
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:text="Middle zone" android:textSize="15sp" android:textColor="#000" />
-                    <EditText android:layout_width="40dp" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="flagNoExtractUi" android:id="@+id/debris_middle" android:maxLength="2" android:descendantFocusability="beforeDescendants" android:focusableInTouchMode="true" android:text="0" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Middle zone"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/debris_middle"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text="0" />
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:text="High" android:textSize="15sp" android:textColor="#000" />
-                    <EditText android:layout_width="40dp" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="flagNoExtractUi" android:id="@+id/debris_high" android:maxLength="2" android:descendantFocusability="beforeDescendants" android:focusableInTouchMode="true" android:text="0" />
-                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="High"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/debris_high"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text="0" />
+                </LinearLayout>
             </LinearLayout>
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:padding="15dp" android:text="Zipliners knocked" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Zipliners knocked"
+                android:textSize="24sp" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/zipliners_0" android:text="0" />
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/zipliners_1" android:text="1" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/zipliners_2" android:text="2" />
+                <RadioButton
+                    android:id="@+id/zipliners_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0" />
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/zipliners_3" android:text="3" />
+                <RadioButton
+                    android:id="@+id/zipliners_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="1" />
+
+                <RadioButton
+                    android:id="@+id/zipliners_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="2" />
+
+                <RadioButton
+                    android:id="@+id/zipliners_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="3" />
             </RadioGroup>
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:padding="15dp" android:text="Parking" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Parking"
+                android:textSize="24sp" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Parked on floor" android:id="@+id/endparking_none" android:padding="15dp" />
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Half on mountain" android:id="@+id/endparking_half" android:padding="15dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Low" android:id="@+id/endparking_low" android:padding="15dp" />
+                <RadioButton
+                    android:id="@+id/endparking_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Parked on floor" />
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/endparking_middle" android:text="Middle" android:padding="15dp" />
+                <RadioButton
+                    android:id="@+id/endparking_half"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Half on mountain" />
 
-                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/endparking_high" android:text="High" android:padding="15dp" />
+                <RadioButton
+                    android:id="@+id/endparking_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Low" />
+
+                <RadioButton
+                    android:id="@+id/endparking_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Middle" />
+
+                <RadioButton
+                    android:id="@+id/endparking_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="High" />
             </RadioGroup>
 
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="24sp" android:textColor="#000" android:textStyle="bold" android:padding="15dp" android:text="End game" android:layout_centerHorizontal="true" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:text="End game"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
-            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/end_hang" android:text="Hang on bar" />
+            <CheckBox
+                android:id="@+id/end_hang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Hang on bar" />
 
-            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/end_clear" android:text="All clear signal" />
+            <CheckBox
+                android:id="@+id/end_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="All clear signal" />
 
-            <View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#616161" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#616161" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/totalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
 
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="15dp" android:id="@+id/totalScore" android:layout_centerHorizontal="true" android:textSize="40sp" android:textStyle="bold" android:text="0" />
-                <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/updateScore" android:text="Update Score" android:layout_below="@id/totalScore" android:layout_centerHorizontal="true" />
+                <Button
+                    android:id="@+id/updateScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalScore"
+                    android:layout_centerHorizontal="true"
+                    android:text="Update Score" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="10dp">
+
                 <com.google.android.gms.ads.AdView
                     android:id="@+id/adView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
                     ads:adSize="BANNER"
-                    ads:adUnitId="@string/banner_ad_unit_id">
-                </com.google.android.gms.ads.AdView>
+                    ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
             </RelativeLayout>
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>
