@@ -150,26 +150,26 @@ public class ScoreActivity extends AppCompatActivity {
 
         if (climber_1_1.isChecked()) {
             if (climber_duringteleop.isChecked()) {
-                total = total + 40;
-            } else {
                 total = total + 20;
+            } else {
+                total = total + 10;
             }
 
         }
 
         if (climber_1_2.isChecked()) {
             if (climber_duringteleop.isChecked()) {
-                total = total + 80;
-            } else {
                 total = total + 40;
+            } else {
+                total = total + 20;
             }
         }
 
         if (climber_1_3.isChecked()) {
             if (climber_duringteleop.isChecked()) {
-                total = total + 120;
-            } else {
                 total = total + 60;
+            } else {
+                total = total + 30;
             }
         }
 
